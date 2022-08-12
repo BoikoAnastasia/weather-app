@@ -14,15 +14,16 @@ function App() {
   const [city, setCity] = useState('Moscow');
 
   useEffect(()=>{
-    
+    gettingWether()
   },[])
 
-  const getDdefaultData = () =>{
+  const getDataWithInput = (e)=>{
+    e.preventDefault();
+    gettingWether()
     
   }
 
-  const gettingWether = async (e) => {
-    e.preventDefault();
+  const gettingWether = async() => {
     try {
       let apiKey = "de24076e8940b80246286f4e77881bbe";
       const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`)
@@ -48,8 +49,8 @@ function App() {
       <Navbar />
       <h1>Прогноз погоды на 5 дней</h1>
       <form>
-        <input type="text" placeholder='Введите название города' value={city} onChange={e => setCity(e.target.value)} />
-        <button type='submit' onClick={gettingWether}>Получить погоду</button>
+        <input type="text" placeholder='Введите название города' onChange={e => setCity(e.target.value)} />
+        <button type='submit' onClick={getDataWithInput}>Получить погоду</button>
       </form>
       <PostItem props={posts}/>
     </div>

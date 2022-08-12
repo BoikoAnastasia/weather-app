@@ -1,0 +1,7 @@
+.weather{
+    border: 1px solid rgb(142, 138, 138);
+    cursor: pointer;
+    max-width: 200px;
+    text-align: center;
+
+}

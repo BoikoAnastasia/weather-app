@@ -1,0 +1,8 @@
+.weather{
+    border: 1px solid rgb(142, 138, 138);
+    cursor: pointer;
+    min-width: 100px;
+    text-align: center;
+    min-height: 180px;
+    margin: 0px 20px 0px 20px;
+}

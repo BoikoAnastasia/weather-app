@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
 }
-
+.App{
+    max-width: 1400px;
+    padding: 0px 15px;
+}
 h1 {
     text-align: center;
 }
@@ -17,4 +20,11 @@ h1 {
 
 .navbar img {
     width: 100%;
+}
+.postList{
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
 }

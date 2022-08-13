@@ -1,16 +1,27 @@
 import React from "react";
+import cl from '../styles/styleComponents.module.css';
 
-const PostItem = ({props}) => {
+const PostItem = ({ props,icon }) => {
+
     return (
-        <div className="weather">
-            <h4>Погода в городе <span className="city">{props.city}</span></h4>
-            <p>Температура: <span className="temp">{props.temp}</span>°C</p>
-            <p><span className="temp">{props.weather_icon}</span></p>
-            <p>Погода: <span className="temp">{props.weather_main}</span></p>
-            <p>Влажность: <span className="humidity">{props.humidity}</span>%</p>
-            <p>Ветер: <span className="wind">{props.wind}</span> км/ч</p>
+        <div >
+            <div className={cl.weather}>
+                {/* Добавить дату, сегодня или завтра */}
+                {/* <p>Температура: <span className="temp">{props.temp}</span>°C</p> */}
+                <p>{props.dt_txt.slice(5,10)}</p>
+                <p><span className="temp"><img src={icon} alt="" /></span></p>
+                <p>
+                    {
+                    (props.main.temp - 273,15>0)
+                    ? <span className="">+{props.main.temp}K</span>
+                    : <span className="">-{props.main.temp}K</span>
+                    }
+                    </p>
+                <p><span className="">{props.weather[0].main}</span></p>
+                
+            </div>
         </div>
     )
-} 
+}
 
 export default PostItem;

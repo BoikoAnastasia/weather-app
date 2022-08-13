@@ -5,6 +5,7 @@ const Navbar = () =>{
     return (
         <div className="navbar">
             <img src={img} alt="" />
+            
         </div>
     )
 }

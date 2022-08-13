@@ -1,8 +1,29 @@
-.weather{
-    border: 1px solid rgb(142, 138, 138);
+.weather {
+    border: 1px solid rgb(232, 231, 231);
+    border-radius: 5px;
     cursor: pointer;
     min-width: 100px;
     text-align: center;
-    min-height: 180px;
+    align-items: center;
+    min-height: 140px;
     margin: 0px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.data {}
+
+.icon {
+    margin: 10px 0px 10px 0px;
+}
+
+.temp {}
+
+.main {
+    position: absolute;
+    bottom: 0px;
+}
+.weather:hover{
+    box-shadow: 1px 1px rgb(167, 166, 166);
 }

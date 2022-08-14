@@ -32,10 +32,7 @@ function App() {
       <Navbar />
       <div className='page'>
         <h1>Прогноз погоды на 5 дней</h1>
-        <form>
-          <input type="text" placeholder='Введите название города' value={city} onChange={e => setCity(e.target.value)} />
-          <button type='submit' onClick={gettingWether}>Получить погоду</button>
-        </form>
+        
         <PostList props={posts} />
       </div>
 

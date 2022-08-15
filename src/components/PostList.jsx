@@ -4,9 +4,9 @@ import PostItem from "./PostItem";
 
 const PostList = ({ props }) => {
     const arrPostItem = []
-
+    
     const SortArr = (arr) => {
-        arr.sort(function (a, b) {
+        arr.sort((a, b) => {
             if (a.dt_txt.slice(11, 19) == "12:00:00") {
                 arrPostItem.push(a);   
             }
